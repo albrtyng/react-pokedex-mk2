@@ -1,6 +1,11 @@
-A Pokedex of the first 493 Pokemon, built in less than 24 hours
-Features include: search, stat viewing, pokemon cries, etc
-Tech used: react, bootstrap, scss
+# react-pokedex-mk2
+A challenge to myself to build out a pokedex in less than 24 hours
+
+## Features include:
+search, stat viewing, pokemon cries, etc
+
+## Tech used:
+react, bootstrap, scss
 
 ## Available Scripts
 
