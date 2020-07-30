@@ -1,0 +1,26 @@
+.stats {
+  border-radius: 45px;
+  width: 30%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: white;
+  margin-right: 45px;
+  padding: 25px 25px;
+}
+
+.stats__stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stats__label {
+  width: 250px;
+  font-size: 20px;
+  text-align: left;
+}
+/*# sourceMappingURL=StatsComponent.css.map */

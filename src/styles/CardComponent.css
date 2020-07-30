@@ -1,0 +1,84 @@
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0;
+  height: 100%;
+}
+
+.card__id {
+  width: 100%;
+  color: black;
+  font-size: 36px;
+  margin: 0;
+}
+
+.card__label {
+  text-transform: capitalize;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 0;
+}
+
+.card__spinner {
+  position: absolute;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 75%;
+}
+
+.card__types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 175px;
+}
+
+.card__type {
+  width: 47%;
+  margin: 10px auto 15px auto;
+  border-radius: 15px;
+  font-weight: 700;
+  color: white;
+}
+
+.my-btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #f56e6e;
+  color: white;
+  height: 35px;
+  width: 100px;
+  font-size: 25px;
+  font-weight: 700;
+  border-radius: 7px;
+  margin-top: 10px;
+  border: none;
+  text-transform: uppercase;
+}
+
+.my-btn:hover {
+  background-color: #cf3737;
+}
+
+.my-btn:active {
+  background-color: #e01212;
+}
+/*# sourceMappingURL=CardComponent.css.map */

@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Pokedex of the first 493 Pokemon, built in less than 24 hours
+Features include: search, stat viewing, pokemon cries, etc
+Tech used: react, bootstrap, scss
 
 ## Available Scripts
 

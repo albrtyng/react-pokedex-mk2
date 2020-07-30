@@ -1,0 +1,19 @@
+.stats {
+  border-radius: 45px;
+  width: 30%;
+  flex-grow: 1;
+  background-color: white;
+  margin-right: 45px;
+  padding: 25px 25px;
+
+  &__stat {
+    display: flex;
+    align-items: center;
+  }
+
+  &__label {
+    width: 250px;
+    font-size: 20px;
+    text-align: left;
+  }
+}

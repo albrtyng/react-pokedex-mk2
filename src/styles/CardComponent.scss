@@ -1,0 +1,65 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  padding: 10px 0;
+  height: 100%;
+
+  &__id {
+    width: 100%;
+    color: black;
+    font-size: 36px;
+    margin: 0
+  }
+
+  &__label {
+    text-transform: capitalize;
+    user-select: none;
+    margin: 0;
+  }
+
+  &__spinner {
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+    width: 75%;
+  }
+
+  &__types {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    width: 175px;
+  }
+
+  &__type {
+    width: 47%;
+    margin: 10px auto 15px auto;
+    border-radius: 15px;
+    font-weight: 700;
+    color: white;
+  }
+}
+
+.my-btn {
+  align-self: center;
+  background-color: #f56e6e;
+  color: white;
+  height: 35px;
+  width: 100px;
+  font-size: 25px;
+  font-weight: 700;
+  border-radius: 7px;
+  margin-top: 10px;
+  border: none;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: #cf3737;
+  }
+
+  &:active {
+    background-color: #e01212;
+  }
+}
