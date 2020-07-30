@@ -23,7 +23,7 @@ const MainComponent = () => {
   const handleSearch = (event) => {
     event.preventDefault();
 
-    const searchValue = event.target.search.value;
+    const searchValue = event.target.search.value.toLowerCase();
     const parsed = parseInt(searchValue);
     if (!isNaN(parsed)) {
       if (parsed <= idLimit) {
