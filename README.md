@@ -5,7 +5,7 @@ A challenge to myself to build out a pokedex in less than 24 hours
 search, stat viewing, pokemon cries, etc
 
 ## Tech used:
-react, bootstrap, scss
+react, hooks, axios, bootstrap, scss
 
 ## Available Scripts
 
