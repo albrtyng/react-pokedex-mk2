@@ -7,6 +7,7 @@ import StatsComponent from './StatsComponent';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/MainComponent.css';
+import { Button } from 'react-bootstrap';
 
 const idLimit = 493;
 
@@ -114,6 +115,10 @@ const MainComponent = () => {
             onChange={() => searchChange()}
           />
         </form>
+        <Button
+          className='random-btn'
+          onClick={() => setCurrentId(Math.floor(Math.random() * Math.floor(idLimit) + 1))}
+        >Surprise Me</Button>
 
         <div className='pokedex__info'>
           <StatsComponent id={currentId} idCallback={() => idCallback()}/>

@@ -105,14 +105,15 @@
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin-left: 25px;
-  width: 75%;
+  width: 34%;
 }
 
 .pokedex__search {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 45%;
+  width: 100%;
   font-size: 24px;
+  margin: 0 25px 25px 0;
   margin-bottom: 25px;
   border: none;
   border-radius: 10px;
@@ -178,5 +179,9 @@
 
 .carousel .slider-wrapper .slider {
   height: 100%;
+}
+
+.random-btn {
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=MainComponent.css.map */
