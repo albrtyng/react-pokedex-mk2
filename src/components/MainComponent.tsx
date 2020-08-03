@@ -12,15 +12,15 @@ const idLimit = 493;
 
 const MainComponent = () => {
 
-  const [pokemonList, setPokemonList] = useState([]);
-  const [currentId, setCurrentId] = useState(1);
-  const [searchError, setSearchError] = useState(false);
+  const [pokemonList, setPokemonList] = useState<any[]>([]);
+  const [currentId, setCurrentId] = useState<number>(1);
+  const [searchError, setSearchError] = useState<boolean>(false);
 
   const idCallback = () => {
     return currentId;
   }
 
-  const handleSearch = (event) => {
+  const handleSearch = (event: any) => {
     event.preventDefault();
 
     const searchValue = event.target.search.value.toLowerCase();
@@ -70,7 +70,7 @@ const MainComponent = () => {
     setTimeout(() => setSearchError(false), 500);
   }
 
-  const searchChange = () => {
+  const searchChange = ():void => {
     setSearchError(false);
   }
 
@@ -129,12 +129,16 @@ const MainComponent = () => {
             useKeyboardArrows
           >
           {
-            pokemonList ? 
-            pokemonList.map((pokemon, index) => {
+            pokemonList?.map((pokemon, index) => {
               return (
-                <CardComponent key={index} id={index + 1} name={pokemon.name} idCallback={() => idCallback()}/>
+                <CardComponent
+                  key={index}
+                  id={index + 1}
+                  name={pokemon.name}
+                  idCallback={() => idCallback()}
+                />
               )
-            }) : null
+            })
           }
           </Carousel>
         </div>

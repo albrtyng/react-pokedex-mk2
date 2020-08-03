@@ -3,10 +3,15 @@ import axios from 'axios';
 import { ProgressBar } from 'react-bootstrap';
 import '../styles/StatsComponent.css';
 
-const StatsComponent = (props) => {
-  const [height, setHeight] = useState(0);
-  const [weight, setWeight] = useState(0);
-  const [stats, setStats] = useState({
+interface Props {
+  id: number,
+  idCallback: Function
+}
+
+const StatsComponent = (props: Props) => {
+  const [height, setHeight] = useState<number>(0);
+  const [weight, setWeight] = useState<number>(0);
+  const [stats, setStats] = useState<{[key: string]: number}>({
     hp: 0,
     attack: 0,
     defense: 0,
@@ -20,7 +25,7 @@ const StatsComponent = (props) => {
     .then(response => {
       setHeight(Math.round((response.data.height * 0.328084 + 0.00001) * 100) / 100);
       setWeight(Math.round((response.data.weight * 0.220462 + 0.00001) * 100) / 100);
-      response.data.stats.forEach(stat => {
+      response.data.stats.forEach((stat: any) => {
         setStats(stats => ({
           ...stats,
           [stat.stat.name]: stat.base_stat
@@ -54,4 +59,3 @@ const StatsComponent = (props) => {
 }
 
 export default StatsComponent;
-

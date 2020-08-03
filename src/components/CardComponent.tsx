@@ -3,7 +3,7 @@ import axios from 'axios';
 import spinner from '../assets/spinner.gif';
 import '../styles/CardComponent.css';
 
-const TYPE_COLOURS = {
+const TYPE_COLOURS : { [key: string]: string }= {
   bug: 'B1C12E',
   dark: '4F3A2D',
   dragon: '755EDF',
@@ -24,23 +24,29 @@ const TYPE_COLOURS = {
   water: '3295F6'
 }
 
-const CardComponent = (props) => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [types, setTypes] = useState([]);
+interface Props {
+  id: number,
+  name: string,
+  idCallback: Function
+}
+
+const CardComponent = (props: Props) => {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [types, setTypes] = useState<any[]>([]);
 
   useEffect(() => {
     axios.get(`https://pokeapi.co/api/v2/pokemon/${props.id}/`)
     .then(response => {
       setTypes([]);
       response.data.types.forEach(
-        type => setTypes(types => [...types, type.type.name])
+        (type: any) => setTypes((types: any[]) => [...types, type.type.name])
       );
     }).catch(error => {
       console.log(error);
     });
   }, [props.id])
   
-  const pokemonCry = (name) => {
+  const pokemonCry = (name: string) => {
     let url = `https://play.pokemonshowdown.com/audio/cries/${name}.mp3`;
     let cry = new Audio(url);
     cry.volume = 0.2;
@@ -49,7 +55,6 @@ const CardComponent = (props) => {
 
   return (
     <div
-      key={props.index}
       className='card'
     >
       <h2 className='card__id'>{`#${props.id}`}</h2>
@@ -70,7 +75,7 @@ const CardComponent = (props) => {
       <div className='card__types'>
       {
         types.map(
-          type => (
+          (type:string) => (
             <p
               key={type}
               className='card__type'
